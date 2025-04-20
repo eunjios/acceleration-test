@@ -23,8 +23,22 @@
 
 ### 실험 내용
 
-|             |       일반       |       GPU        |
-| :---------: | :--------------: | :--------------: |
-|  transform  |  left, top 변경  | translate3d 변경 |
-|  색상 변경  | background-color |      filter      |
-| will-change |        -         |        O         |
+  |             |       일반       |       GPU        |
+  | :---------: | :--------------: | :--------------: |
+  |  transform  |  left, top 변경  | translate3d 변경 |
+  |  색상 변경  | background-color |      filter      |
+  | will-change |        -         |        O         |
+
+#### 실험 결과
+
+1. 일반 
+<img width="480" alt="결과1" src="https://github.com/user-attachments/assets/0f425905-0267-4d9f-91f1-8c687d5146ac" />
+
+- 렌더링 시간 (50ms)
+- 페인팅 발생 (17ms)
+
+2. GPU 가속
+<img width="480" alt="결과2" src="https://github.com/user-attachments/assets/29f3c0fc-1d3d-48b4-ba27-48b87aec34bf" />
+
+- 렌더링 시간 (1ms) ✅
+- 페인팅 발생하지 않음 (0ms) ✅
